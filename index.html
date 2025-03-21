@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Messenger</title>
   </head>
   <body>
     <div class="status-bar">
@@ -12,11 +13,11 @@
         <i class="fa-solid fa-wifi"></i>
       </div>
       <div class="status-bar__column">
-        <spna>21:34</spna>
+        <span class="clock"></span>
       </div>
       <div class="status-bar__column">
         <span>73%</span>
-        <i class="fa-solid fa-battery-three-quarters"></i>
+        <i class="fa-solid fa-battery-three-quarters fa-lg"></i>
         <i class="fa-solid fa-bolt"></i>
       </div>
     </div>
@@ -35,6 +36,7 @@
       <a href="#">Find Account or Password</a>
     </form>
 
+    <script src="./javascript/clock.js"></script>
     <script
       src="https://kit.fontawesome.com/ea01b2e99c.js"
       crossorigin="anonymous"
