@@ -26,11 +26,18 @@
       </p>
     </header>
 
-    <form class="login-form">
-      <input type="text" placeholder="Email ro phone number" />
-      <input type="password" placeholder="password" />
-      <input type="submit" value="Log In" />
-      <a href="#">Find Account or Password</a>
+    <form action="friends.html" method="get" class="login-form">
+      <!-- get은 보안상 문제가 될 수 있기 때문에 url에 전송하기에 괜찮은 것에만 get을 넣기  서버에 보내고 싶을 경우 post 방식을 사용 ex) 검색창 -->
+      <input
+        name="username"
+        class="login-form__input"
+        type="text"
+        placeholder="이메일 혹은 전화번호"
+      />
+      <input name="password" class="login-form__input type="password"
+      placeholder="비밀번호" />
+      <input class="login-form__btn" type="submit" value="로그인" />
+      <a class="login-form__a" href="#">계정 혹은 비밀번호 찾기</a>
     </form>
 
     <script src="./javascript/clock.js"></script>
