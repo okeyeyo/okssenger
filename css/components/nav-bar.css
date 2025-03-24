@@ -13,5 +13,21 @@
 }
 
 .nav__link {
+  position: relative; /* nav__notification의 부모 */
   color: #2e363e;
+}
+
+.nav__notification {
+  background-color: #ff5a4a;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute; /* 가장 가까운 부모를 기준으로 옮기기 때문에 해당되는 부분에 부모를 정해줘야 함 */
+  left: 15px;
+  bottom: 15px;
 }
