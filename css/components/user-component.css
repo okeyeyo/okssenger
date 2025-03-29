@@ -1,3 +1,7 @@
+.user-component {
+  justify-content: space-between;
+}
+
 .user-component,
 .user-component__column:first-child {
   display: flex;
@@ -7,17 +11,32 @@
 .user-component__avatar {
   width: 70px;
   height: 70px;
-  border-radius: 27px;
-  margin: 0px 20px;
+  border-radius: 30px;
+  margin-right: 20px;
 }
 
 .user-component__name {
-  font-weight: 600;
-  font-size: 22px;
+  font-size: var(--basic-font-size);
 }
 
 .user-component__introduce {
   margin-top: 8px;
   font-size: 17px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.user-component__column:last-child {
   color: rgba(0, 0, 0, 0.5);
 }
