@@ -6,6 +6,7 @@
   font-size: 18px;
   margin-bottom: 10px;
   margin-top: -15px;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 #friends-display-link i {
@@ -26,9 +27,4 @@
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.frineds-screen__list-header span {
-  color: rgba(0, 0, 0, 0.7);
 }

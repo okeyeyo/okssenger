@@ -55,5 +55,5 @@
 }
 
 .status-bar__toggle-switch.dark .status-bar__toggle-thumb {
-  left: 31px; /* 50 - 17 - 2 = 32px */
+  left: 31px;
 }
