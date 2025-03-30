@@ -6,6 +6,7 @@
 .user-component__column:first-child {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .user-component__avatar {
@@ -17,12 +18,13 @@
 
 .user-component__name {
   font-size: var(--basic-font-size);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .user-component__introduce {
   margin-top: 8px;
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .user-component__avatar--xl {
@@ -34,9 +36,11 @@
   width: 60px;
   height: 60px;
   border-radius: 25px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.user-component__column:last-child {
-  color: rgba(0, 0, 0, 0.5);
+.user-component__column-music {
+  color: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 8px;
 }
