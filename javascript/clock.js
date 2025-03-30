@@ -5,7 +5,8 @@ function clock() {
   var minutes = time.getMinutes().toString().padStart(2, "0");
 
   var timeString = `${hours}:${minutes}`;
-  document.getElementsByClassName("clock")[0].textContent = timeString;
+  document.getElementsByClassName("status-bar__clock")[0].textContent =
+    timeString;
 }
 
 setInterval(clock, 1000);
