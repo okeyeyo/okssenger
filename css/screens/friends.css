@@ -5,7 +5,6 @@
   padding: 15px 0px;
   font-size: 18px;
   margin-bottom: 10px;
-  margin-top: -15px;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -19,7 +18,7 @@
 
 .frineds-screen__list {
   margin-top: 25px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: var(--stick-border);
   padding-top: 15px;
 }
 
@@ -27,4 +26,9 @@
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
+}
+
+.frineds-screen__list-header:first-child {
+  padding-bottom: 25px;
+  border-bottom: var(--stick-border);
 }

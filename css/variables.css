@@ -2,4 +2,5 @@
   --basic-color: #d65838;
   --horizontal-space: 25px;
   --basic-font-size: 20px;
+  --stick-border: 1px solid rgba(0, 0, 0, 0.2);
 }
