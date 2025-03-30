@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <button class="status-bar__toggle-switch" id="darkToggle">
+          <span class="status-bar__toggle-thumb">🌝</span>
+        </button>
+      </div>
+      <div class="status-bar__column">
+        <div class="status-bar__clock"></div>
+      </div>
+      <div class="status-bar__column">
+        <span class="status-bar__battery"></span>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">대화</h1>
+      <div class="screen-header__icons">
+        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></sapn>
+        <span><i class="far fa-comment-dots fa-lg"></i></sapn>
+        <span><i class="fa-solid fa-music fa-lg"></i></sapn>
+        <span><i class="fa-solid fa-gear fa-lg"></i></sapn>
+      </div>
+    </header>
+
+    <main class="main-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img src="http://img.newspim.com/news/2017/01/31/1701311632536400.jpg"
+          class="user-component__avatar user-component__avatar"/>
+          <div class="user-component__text">
+            <h4 class="user-component__name">홍길동</h4>
+            <h6 class="user-component__introduce">배고파</h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <span>21:22</span>
+          <
+        </div>
+      </div>
+
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="far fa-user fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">1</span>
+            <i class="fas fa-comment fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html">
+            <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <i class="fa-solid fa-ellipsis fa-lg"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script src="./javascript/clock.js"></script>
+    <script src="./javascript/battery.js"></script>
+    <script src="./javascript/darkmode.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ea01b2e99c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
