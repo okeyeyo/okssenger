@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   padding: 5px 3px;
+  font-size: 17px;
 }
 
 .status-bar__column {
@@ -23,37 +24,4 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: 10px;
-}
-
-.status-bar__clock,
-.status-bar__battery {
-  font-size: 17px;
-}
-
-.status-bar__toggle-switch {
-  height: 17px;
-  width: 40px;
-  border-radius: 15px;
-  border: none;
-  cursor: pointer;
-  margin: 3px 0px 0px 7px;
-}
-
-.status-bar__toggle-thumb {
-  width: 20px;
-  height: 20px;
-  background: none;
-  border: 50%;
-  position: absolute;
-  top: 7px;
-  left: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: left 0.3s;
-  font-size: 17px;
-}
-
-.status-bar__toggle-switch.dark .status-bar__toggle-thumb {
-  left: 31px;
 }
