@@ -23,12 +23,13 @@
 }
 
 .frineds-screen__list-header {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .frineds-screen__list-header:first-child {
-  padding-bottom: 25px;
   border-bottom: var(--stick-border);
 }
