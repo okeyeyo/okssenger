@@ -1,0 +1,90 @@
+.login-body {
+  background-color: var(--basic-color);
+}
+
+.login-box {
+  background-color: #fff8f2;
+  width: 400px;
+  height: 700px;
+  border-radius: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcom-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+}
+
+.welcom-header__logo {
+  height: 150px;
+}
+
+.welcom-header__title {
+  margin-top: 20px;
+  font-size: 60px;
+  color: var(--basic-color);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+  position: relative;
+}
+
+.login-form__input {
+  background-color: #f4e7d4;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.login-form__input input {
+  background-color: #f4e7d4;
+  border: 0;
+}
+
+.login-form input::placeholder {
+  color: #a58164;
+  font-size: 15px;
+}
+
+.login-form input:focus {
+  border-color: var(--basic-color);
+}
+
+.login-form__btn {
+  background-color: var(--basic-color);
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 20px 0px;
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.login-form__a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: var(--basic-color);
+  gap: 40px;
+  margin-top: 15px;
+}
+
+.login-form__password {
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  cursor: pointer;
+}

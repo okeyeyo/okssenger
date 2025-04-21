@@ -1,0 +1,57 @@
+# Node.js
+node_modules/           # Node.js 패키지 폴더
+npm-debug.log*          # npm 디버그 로그
+yarn-debug.log*         # yarn 디버그 로그
+yarn-error.log*         # yarn 에러 로그
+
+# 로그 파일
+logs/                   # 로그 폴더
+*.log                   # 모든 .log 파일
+
+# 환경 변수 파일 (민감한 정보 포함)
+.env                    # 환경 변수 파일
+.env.local              # 로컬 환경 변수 파일
+.env.*.local            # 환경 변수 파일 (개발, 프로덕션 등)
+
+# 빌드 결과물 (React 빌드 결과 등)
+dist/                   # 빌드 결과물 폴더
+build/                  # React 빌드 폴더
+
+# 테스트 커버리지 리포트
+coverage/               # 테스트 커버리지 리포트 폴더
+
+# 운영체제별 파일
+.DS_Store               # macOS에서 생성되는 시스템 파일
+Thumbs.db               # Windows에서 생성되는 파일
+
+# IDE / 에디터 설정 (개인적인 설정 파일)
+.vscode/                # VSCode 설정 파일
+.idea/                  # JetBrains IDE 설정 파일
+*.suo                   # Visual Studio 설정 파일
+*.ntvs*                 # Visual Studio 설정 파일
+*.njsproj               # Visual Studio 프로젝트 파일
+*.sln                   # Visual Studio 솔루션 파일
+
+# 데이터베이스 및 스토리지 덤프 (필요 없다면)
+*.sqlite                # SQLite 파일
+*.db                    # 데이터베이스 파일
+dump/                   # 데이터베이스 덤프 파일
+
+# 기타 캐시 및 백업 파일
+.cache/                 # 캐시 파일
+*.bak                   # 백업 파일
+
+# Vite, Babel, Next.js 캐시 및 빌드 관련
+.vite/
+.next/
+.babel-cache/
+out/
+.nyc_output/
+
+# 테스트 관련
+jest-html-reporters-*.html
+
+# 임시 파일
+*.swp
+*.tmp
+*.temp

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/okssenger-logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Okssenger</title>
+  </head>
+  <body class="login-body">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <img src="./img/okssenger-logo.png" class="status-bar__title" />
+      </div>
+      <div class="status-bar__column">
+        <div class="status-bar__clock"></div>
+      </div>
+      <div class="status-bar__column">
+        <span class="status-bar__battery"></span>
+      </div>
+    </div>
+
+    <div class="login-box">
+      <header class="welcom-header">
+        <img src="./img/okssenger-logo.png" class="welcom-header__logo" />
+        <h1 class="welcom-header__title">옥신저</h1>
+      </header>
+
+      <form action="friends.html" method="get" class="login-form">
+        <!-- get은 보안상 문제가 될 수 있기 때문에 url에 전송하기에 괜찮은 것에만 get을 넣기  서버에 보내고 싶을 경우 post 방식을 사용 ex) 검색창 -->
+        <div class="login-form__input">
+          <span class="login-form__input__id-icon"
+            ><i class="fa-solid fa-user fa-sm" style="color: #a58164"></i
+          ></span>
+          <input name="username" type="text" placeholder="아이디" />
+        </div>
+
+        <div class="login-form__input">
+          <span class="login-form__input__pass-icon"
+            ><i class="fa-solid fa-lock fa-sm" style="color: #a58164"></i
+          ></span>
+          <input
+            name="password"
+            type="password"
+            placeholder="비밀번호"
+            required
+          />
+          <div class="login-form__password">
+            <i
+              class="fa-solid fa-eye toggle-password"
+              style="color: #a58164"
+              onclick="togglePassword()"
+            ></i>
+          </div>
+        </div>
+
+        <input
+          class="login-form__btn"
+          type="submit"
+          value="로그인"
+          style="font-family: Jua"
+        />
+        <div class="login-form__a">
+          <a href="#">회원가입</a>
+          <a href="#">비밀번호 찾기</a>
+        </div>
+      </form>
+    </div>
+
+    <div id="loading-screen">
+      <img src="img/okssenger-logo.png" class="loading-logo" />
+      <h1 class="loading-text">옥신저</h1>
+    </div>
+
+    <!-- <div id="no-mobile">
+      <span>스크린이 너무 큽니다.</span>
+    </div> -->
+
+    <script
+      src="https://kit.fontawesome.com/ea01b2e99c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascript/clock.js"></script>
+    <script src="./javascript/battery.js"></script>
+    <script src="./javascript/togglePassword.js"></script>
+    <script src="./javascript/loading.js"></script>
+  </body>
+</html>
