@@ -1,20 +1,22 @@
-.login-body {
+/* .login-body {
   background-color: var(--basic-color);
-}
+} */
 
 .login-box {
   background-color: #fff8f2;
-  width: 400px;
-  height: 700px;
+  width: 80%;
+  height: 86%;
   border-radius: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .welcom-header {
-  margin: 90px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -23,12 +25,12 @@
 }
 
 .welcom-header__logo {
-  height: 150px;
+  width: 30vw;
 }
 
 .welcom-header__title {
-  margin-top: 20px;
-  font-size: 60px;
+  margin: 20px;
+  font-size: 50px;
   color: var(--basic-color);
 }
 
@@ -43,7 +45,9 @@
   background-color: #f4e7d4;
   padding: 14px;
   border-radius: 10px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
 }
 
 .login-form__input input {
@@ -52,12 +56,17 @@
 }
 
 .login-form input::placeholder {
-  color: #a58164;
+  color: var(--brown-color);
   font-size: 15px;
+  font-family: jua;
 }
 
 .login-form input:focus {
-  border-color: var(--basic-color);
+  outline: none;
+}
+
+.login-form__input__icon {
+  margin-right: 8px;
 }
 
 .login-form__btn {
@@ -84,7 +93,11 @@
 
 .login-form__password {
   position: absolute;
-  right: 10px;
-  top: 60px;
+  right: 12px;
   cursor: pointer;
+}
+
+.login-form__a a {
+  text-decoration: none;
+  color: var(--main-color);
 }

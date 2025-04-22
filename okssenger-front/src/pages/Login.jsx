@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaUser, FaLock, FaEye, FaEyeSlash } from "react-icons/fa"; // FontAwesome 아이콘 import
-import "../styles/Login.css"; // 스타일 파일 import
+import "../styles/App.css"; // 스타일 파일 import
 
 function Login() {
   const [passwordType, setPasswordType] = useState("password");
@@ -39,7 +39,7 @@ function Login() {
 
       <form onSubmit={handleSubmit} className="login-form">
         <div className="login-form__input">
-          <span className="login-form__input__id-icon">
+          <span className="login-form__input__icon">
             <FaUser size={20} color="#a58164" />
           </span>
           <input
@@ -52,7 +52,7 @@ function Login() {
         </div>
 
         <div className="login-form__input">
-          <span className="login-form__input__pass-icon">
+          <span className="login-form__input__icon">
             <FaLock size={20} color="#a58164" />
           </span>
           <input
@@ -86,8 +86,8 @@ function Login() {
           style={{ fontFamily: "Jua" }}
         />
         <div className="login-form__a">
-          {/* <a href="#">회원가입</a>
-          <a href="#">비밀번호 찾기</a> */}
+          <a href="#">회원가입</a>
+          <a href="#">비밀번호 찾기</a>
         </div>
       </form>
     </div>

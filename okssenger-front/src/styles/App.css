@@ -4,9 +4,10 @@
 :root {
   --basic-color: #f66845;
   --background-color: #f7f0e4;
+  --brown-color: #a58164;
   --horizontal-space: 25px;
   --basic-font-size: 20px;
-  --stick-border: 1px solid rgba(0, 0, 0, 0.2);
+  --stick-border: 1px solid rgba(26, 19, 19, 0.2);
   --black-color: #2e363e;
 }
 
