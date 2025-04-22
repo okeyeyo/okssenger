@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { FaUser, FaLock, FaEye, FaEyeSlash } from "react-icons/fa"; // FontAwesome 아이콘 import
 import "../styles/Login.css"; // 스타일 파일 import
 
-function LoginPage() {
+function Login() {
   const [passwordType, setPasswordType] = useState("password");
-  const [iconClass, setIconClass] = useState("fa-eye");
+  const [iconClass, setIconClass] = useState("eye"); // 'eye' 상태로 초기화
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -12,8 +13,8 @@ function LoginPage() {
     setPasswordType((prevType) =>
       prevType === "password" ? "text" : "password"
     );
-    setIconClass((prevClass) =>
-      prevClass === "fa-eye" ? "fa-eye-slash" : "fa-eye"
+    setIconClass(
+      (prevClass) => (prevClass === "eye" ? "eye-slash" : "eye") // 상태를 'eye' / 'eye-slash'로 관리
     );
   };
 
@@ -39,10 +40,7 @@ function LoginPage() {
       <form onSubmit={handleSubmit} className="login-form">
         <div className="login-form__input">
           <span className="login-form__input__id-icon">
-            <i
-              className="fa-solid fa-user fa-sm"
-              style={{ color: "#a58164" }}
-            ></i>
+            <FaUser size={20} color="#a58164" />
           </span>
           <input
             name="username"
@@ -55,10 +53,7 @@ function LoginPage() {
 
         <div className="login-form__input">
           <span className="login-form__input__pass-icon">
-            <i
-              className="fa-solid fa-lock fa-sm"
-              style={{ color: "#a58164" }}
-            ></i>
+            <FaLock size={20} color="#a58164" />
           </span>
           <input
             name="password"
@@ -69,11 +64,18 @@ function LoginPage() {
             required
           />
           <div className="login-form__password">
-            <i
-              className={`fa-solid ${iconClass} toggle-password`} // 아이콘 클래스 동적 변경
-              style={{ color: "#a58164" }}
-              onClick={togglePassword} // 비밀번호 표시 토글
-            ></i>
+            <span
+              className="toggle-password"
+              style={{ color: "#a58164", cursor: "pointer" }}
+              onClick={togglePassword}
+            >
+              {/* 조건부 렌더링으로 아이콘 변경 */}
+              {iconClass === "eye" ? (
+                <FaEye size={20} />
+              ) : (
+                <FaEyeSlash size={20} />
+              )}
+            </span>
           </div>
         </div>
 
@@ -84,12 +86,12 @@ function LoginPage() {
           style={{ fontFamily: "Jua" }}
         />
         <div className="login-form__a">
-          <a href="#">회원가입</a>
-          <a href="#">비밀번호 찾기</a>
+          {/* <a href="#">회원가입</a>
+          <a href="#">비밀번호 찾기</a> */}
         </div>
       </form>
     </div>
   );
 }
 
-export default LoginPage;
+export default Login;

@@ -1,6 +1,15 @@
 @import "../styles/Login.css";
 @import "../styles/components/status-bar.css";
 
+:root {
+  --basic-color: #f66845;
+  --background-color: #f7f0e4;
+  --horizontal-space: 25px;
+  --basic-font-size: 20px;
+  --stick-border: 1px solid rgba(0, 0, 0, 0.2);
+  --black-color: #2e363e;
+}
+
 body {
   font-family: "Jua", sans-serif;
 }
