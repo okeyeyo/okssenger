@@ -1,5 +1,9 @@
 @import "../styles/Login.css";
 @import "../styles/components/status-bar.css";
+@import "../styles/components/screen-header.css";
+@import "../styles/components/user-component.css";
+@import "../styles/components/nav-bar.css";
+@import "../styles/components/badge.css";
 
 :root {
   --basic-color: #f66845;

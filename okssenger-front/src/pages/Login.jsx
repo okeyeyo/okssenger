@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // useNavigate 훅 사용
 import { FaUser, FaLock, FaEye, FaEyeSlash } from "react-icons/fa"; // FontAwesome 아이콘 import
 import "../styles/App.css"; // 스타일 파일 import
 
 function Login() {
+  const navigate = useNavigate(); // useNavigate 훅 사용
   const [passwordType, setPasswordType] = useState("password");
   const [iconClass, setIconClass] = useState("eye"); // 'eye' 상태로 초기화
   const [username, setUsername] = useState("");
@@ -24,10 +26,18 @@ function Login() {
     // 로그인 로직을 여기에 추가 (예: API 호출)
     console.log("Username:", username);
     console.log("Password:", password);
+
+    // 로그인 성공 시 홈으로 이동
+    if (username === "admin" && password === "password") {
+      // 예시 조건
+      navigate("/friends"); // 홈 페이지로 이동
+    } else {
+      alert("아이디나 비밀번호가 잘못되었습니다.");
+    }
   };
 
   return (
-    <div className="login-box">
+    <main className="login-box">
       <header className="welcom-header">
         <img
           src={process.env.PUBLIC_URL + "/logo.png"}
@@ -90,7 +100,7 @@ function Login() {
           <a href="#">비밀번호 찾기</a>
         </div>
       </form>
-    </div>
+    </main>
   );
 }
 
