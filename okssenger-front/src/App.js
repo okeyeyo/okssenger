@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // react-router-dom v6에서 변경된 부분
 import Layout from "./components/Layout"; // Layout 컴포넌트 불러오기
-import Login from "./pages/Login"; // Login 페이지
-import Chats from "./pages/Chats"; // Chats 페이지
-import Friends from "./pages/Friends"; // Friends 페이지
+import Login from "./pages/Login.jsx"; // Login 페이지
+import Chats from "./pages/Chats.jsx"; // Chats 페이지
+import Friends from "./pages/Friends.jsx"; // Friends 페이지
 
 import "./styles/App.css";
 

@@ -55,3 +55,6 @@ jest-html-reporters-*.html
 *.swp
 *.tmp
 *.temp
+
+#비밀번호
+encryptPassword.js
