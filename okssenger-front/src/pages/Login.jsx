@@ -21,18 +21,32 @@ function Login() {
   };
 
   // 로그인 폼 제출 처리
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // 로그인 로직을 여기에 추가 (예: API 호출)
-    console.log("Username:", username);
-    console.log("Password:", password);
 
-    // 로그인 성공 시 홈으로 이동
-    if (username === "admin" && password === "password") {
-      // 예시 조건
-      navigate("/friends"); // 홈 페이지로 이동
-    } else {
-      alert("아이디나 비밀번호가 잘못되었습니다.");
+    try {
+      const response = await fetch("http://localhost:3000/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.message === "로그인 성공") {
+        console.log("로그인 성공!", data.user);
+        navigate("/friends"); // 로그인 성공하면 친구 목록으로 이동
+      } else {
+        alert(data.message); // 로그인 실패 메시지 보여주기
+      }
+    } catch (error) {
+      console.error("로그인 중 에러 발생:", error);
+      alert("서버 오류가 발생했습니다.");
     }
   };
 
