@@ -1,4 +1,5 @@
 # Node.js
+**/node_modules/
 node_modules/           # Node.js 패키지 폴더
 npm-debug.log*          # npm 디버그 로그
 yarn-debug.log*         # yarn 디버그 로그
