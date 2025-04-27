@@ -55,23 +55,23 @@ function Main() {
         <ul className="nav__list">
           <li className="nav__btn">
             <a className="nav__link" href="friends.html">
-              <FaUser />
+              <FaUser size={40} />
             </a>
           </li>
           <li className="nav__btn">
             <a className="nav__link" href="chats.html">
               <span className="nav__notification badge">1</span>
-              <FaComment />
+              <FaComment size={40} />
             </a>
           </li>
           <li className="nav__btn">
             <a className="nav__link" href="shopping.html">
-              <FaShoppingCart />
+              <FaShoppingCart size={40} />
             </a>
           </li>
           <li className="nav__btn">
             <a className="nav__link" href="more.html">
-              <FaEllipsisH />
+              <FaEllipsisH size={40} />
               <div className="dot"></div>
             </a>
           </li>
