@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <img src="./img/okssenger-logo.png" class="status-bar__title" />
+      </div>
+      <div class="status-bar__column">
+        <div class="status-bar__clock"></div>
+      </div>
+      <div class="status-bar__column">
+        <span class="status-bar__battery"></span>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">쇼핑</h1>
+      <div class="screen-header__icons">
+        <span><i class="fa-solid fa-cart-shopping fa-lg"></i></sapn>
+        <span><i class="fa-solid fa-gear fa-lg"></i></sapn>
+      </div>
+    </header>
+
+    <div id="shopping-display-link">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>쇼핑 검색</span>
+    </div>
+
+    <div class="shopping-display-menu">
+      <span class="shopping-display-menu__factor">홈</span>
+      <div class="shopping-display-menu__factor">
+        <span>첫구매쿠폰</span>
+        <span>옥딜</span>
+      </div>
+      <span class="shopping-display-menu__factor ">
+        랭킹
+        <div class="shopping-display-menu__select-bar"></div>
+      </span>
+      <span class="shopping-display-menu__factor">라이브</span>
+      <span class="shopping-display-menu__factor">스토어</span>
+    </div>
+
+    <div class="shopping-display-menu-bar"></div>
+
+    <div class="shopping-display-category">
+      <span>전체</span>
+      <span>e쿠폰/교환권</span>
+      <span>패션</span>
+      <span>식품</span>
+      <span>뷰티</span>
+      <span>생활</span>
+      <span>가전/디지털</span>
+      <span>인테리어</span>
+      <span>스포츠/레저</span>
+      <span>출산/유아동</span>
+    </div>
+
+    <main class="main-screen">
+      <div class="shopping-display-notice">
+        <span class="current-time"></span>
+        <span>인기 급상승 중인 상품</span>
+        <i class="fa-solid fa-circle-info"></i>
+      </div>
+      <div class="shopping-display-items">
+        <div class="shopping-display-item">
+          <div class="shopping-display-item__img">
+            <img src="https://thumbnail6.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/a93db2ab-6932-40d9-ab60-5cda27bbcded4251466130971542177.png"/>
+            <span class="shopping-display-item__rank-top">1</span>
+            <span class="shopping-display-item__order">9,999+ 주문중</span>
+          </div>
+          <span class="shopping-display-item__description">하동품애 GAP 한단 설향 딸기 대과, 500g, 팩</span>
+          <div class="shopping-display-item__discount">
+            <span>옥딜가</span>
+            <span>13,380원</span>
+          </div>
+          <span class="shopping-display-item__first-cost">25,580원</span>
+        </div>
+        <div class="shopping-display-item">
+          <div class="shopping-display-item__img">
+            <img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/372146431008066-121681a8-9669-402e-9095-79417b6a263c.jpg"/>
+            <span class="shopping-display-item__rank-top">2</span>
+            <span class="shopping-display-item__order">1,140 주문중</span>
+          </div>
+          <span class="shopping-display-item__description">불닭볶음면 까르보 컵 80g, 6개</span>
+          <div class="shopping-display-item__discount">
+            <span>옥딜가</span>
+            <span>7,130원</span>
+          </div>
+          <span class="shopping-display-item__first-cost">25,580원</span>
+          <div class="shopping-display-item__review">
+            <i class="fa-solid fa-star fa-2xs" style="color: #ffc52e;"></i>
+            <span>100% 만족</span>
+            <div></div>
+            <span>리뷰 942</span>
+          </div>
+        </div>
+        <div class="shopping-display-item">
+          <div class="shopping-display-item__img">
+            <img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/8462/89543f4626bb5aa516c9498017f0ff94344ec222dd83726440393f50e53d.jpg"/>
+            <span class="shopping-display-item__rank-top">3</span>
+            <span class="shopping-display-item__order">25 주문중</span>
+          </div>
+          <span class="shopping-display-item__description">라보에이치 약산성 두피강화 비건 기능성샴푸, 400ml, 1개</span>
+          <div class="shopping-display-item__discount">
+            <span>옥딜가</span>
+            <span>15,900원</span>
+          </div>
+          <span class="shopping-display-item__first-cost">28,900원</span>
+          <div class="shopping-display-item__review">
+            <i class="fa-solid fa-star fa-2xs" style="color: #ffc52e;"></i>
+            <span>100% 만족</span>
+            <div></div>
+            <span>리뷰 312</span>
+          </div>
+        </div>
+        <div class="shopping-display-item">
+          <div class="shopping-display-item__img">
+            <img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/41194284059753-8b5f35c0-510c-4a58-945e-b63d2c8fd6f5.jpg"/>
+            <span class="shopping-display-item__rank">4</span>
+            <span class="shopping-display-item__order">112 주문중</span>
+          </div>
+          <span class="shopping-display-item__description">2080 닥터크리닉 치석치약 2.0, 120g, 3개</span>
+          <div class="shopping-display-item__discount">
+            <span>옥딜가</span>
+            <span>6,270원</span>
+          </div>
+          <span class="shopping-display-item__first-cost">6,400원</span>
+          <div class="shopping-display-item__review">
+            <i class="fa-solid fa-star fa-2xs" style="color: #ffc52e;"></i>
+            <span>100% 만족</span>
+            <div></div>
+            <span>리뷰 471</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="far fa-user fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">1</span>
+            <i class="far fa-comment fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="shopping.html">
+            <i class="fa-solid fa-cart-shopping fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <i class="fa-solid fa-ellipsis fa-lg"></i>
+            <div class="dot"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="no-mobile">
+      <span>스크린이 너무 큽니다.</span>
+    </div>
+
+    <script src="./javascript/clock.js"></script>
+    <script src="./javascript/battery.js"></script>
+    <script src="./javascript/darkmode.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ea01b2e99c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

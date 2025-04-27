@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats</title>
+  </head>
+  <body>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">대화</h1>
+      <div class="screen-header__icons">
+        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></sapn>
+        <span><i class="far fa-comment-dots fa-lg"></i></sapn>
+        <span><i class="fa-solid fa-gear fa-lg"></i></sapn>
+      </div>
+    </header>
+
+    <main class="main-screen">
+      <a href="chat.html">
+        <div class="user-component">
+          <div class="user-component__column">
+            <img src="https://data.onnada.com/character/202503/thumb_1994052142_31a1e082__main1.png"
+            class="user-component__avatar user-component__avatar"/>
+            <div class="user-component__text">
+              <h4 class="user-component__name">坂本太郎</h4>
+              <h6 class="user-component__introduce">キムさん、お誕生日おめでとうございます。</h6>
+            </div>
+          </div>
+          <div class="user-component__column user-component__alarm">
+            <span class="user-component__time">07:57</span>
+            <div class="badge">1</div>
+          </div>
+        </div>
+      </a>
+
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="far fa-user fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">1</span>
+            <i class="fas fa-comment fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="shopping.html">
+            <i class="fa-solid fa-cart-shopping fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <i class="fa-solid fa-ellipsis fa-lg"></i>
+            <div class="dot"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="no-mobile">
+      <span>스크린이 너무 큽니다.</span>
+    </div>
+
+    <script src="./javascript/clock.js"></script>
+    <script src="./javascript/battery.js"></script>
+    <script src="./javascript/darkmode.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ea01b2e99c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
