@@ -10,6 +10,8 @@ import {
   FaComment,
   FaShoppingCart,
   FaEllipsisH,
+  FaChevronDown,
+  FaChevronUp,
 } from "react-icons/fa"; // FontAwesome 아이콘 import
 function Friends() {
   return (
@@ -22,9 +24,6 @@ function Friends() {
           </span>
           <span>
             <FaUserPlus size={28} />
-          </span>
-          <span>
-            <FaMusic size={28} />
           </span>
           <span>
             <FaCog size={28} />
@@ -52,11 +51,11 @@ function Friends() {
         <div className="frineds-screen__list">
           <div className="frineds-screen__list-header">
             <span>채널</span>
-            <i className="fa-solid fa-chevron-down fa-xs"></i>
+            <FaChevronDown size={18} color="var(--gray-color)" />
           </div>
           <div className="frineds-screen__list-header">
             <span>친구 3</span>
-            <i className="fa-solid fa-chevron-up fa-xs"></i>
+            <FaChevronUp size={18} color="var(--gray-color)" />
           </div>
           <div className="user-component">
             <div className="user-component__column">

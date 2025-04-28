@@ -18,8 +18,17 @@
   --basic-font-size: 20px;
   --stick-border: 1px solid rgba(26, 19, 19, 0.2);
   --black-color: #2e363e;
+  --gray-color: rgba(0, 0, 0, 0.5);
   --font-point: "Jua", sans-serif;
   --font-basic: "Lato", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {

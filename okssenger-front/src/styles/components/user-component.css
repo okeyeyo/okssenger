@@ -1,6 +1,6 @@
 .main-screen {
   padding: 0px var(--horizontal-space);
-  background-color: #fff8f2;
+  background-color: var(--background-color);
 }
 
 .user-component {
@@ -11,13 +11,10 @@
 .user-component__column:first-child {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  height: 90px;
 }
 
 .user-component__avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 30px;
   margin-right: 20px;
 }
 
@@ -33,16 +30,17 @@
 .user-component__avatar--xl {
   width: 80px;
   height: 80px;
+  border-radius: 30px;
 }
 
 .user-component__avatar--sm {
   width: 60px;
   height: 60px;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 .user-component__column-music {
-  border: 2px solid rgba(0, 0, 0, 0.7);
+  border: 1.5px solid rgba(0, 0, 0, 0.7);
   border-radius: 20px;
   padding: 8px;
 }
@@ -66,5 +64,5 @@
 
 .user-component__phon-number {
   margin-right: 3px;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--gray-color);
 }

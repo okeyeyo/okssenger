@@ -34,8 +34,3 @@
 .status-bar__title {
   height: 17px;
 }
-
-.status-bar__clock,
-.status-bar__battery {
-  color: var(--brown-color);
-}
