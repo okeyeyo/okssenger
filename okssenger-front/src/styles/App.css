@@ -28,6 +28,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-basic);
   font-weight: 600;
+  height: 100vh;
 }
 
 h1 {

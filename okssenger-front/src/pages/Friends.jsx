@@ -13,9 +13,9 @@ import {
 } from "react-icons/fa"; // FontAwesome 아이콘 import
 function Friends() {
   return (
-    <main>
+    <main className="main-screen">
       <header className="screen-header">
-        <h1 className="screen-header__title">친구</h1>
+        <h3 className="screen-header__title">친구</h3>
         <div className="screen-header__icons">
           <span>
             <FaSearch size={28} />
