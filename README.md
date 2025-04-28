@@ -1,2 +1,1 @@
-It's to make a clone of messenger program
-use html, css, js
+리액트를 활용한 메신저 프로그램
