@@ -53,12 +53,14 @@
 .login-form__input input {
   background-color: #f4e7d4;
   border: 0;
+  width: 100%;
+  font-weight: 600;
 }
 
 .login-form input::placeholder {
   color: var(--brown-color);
   font-size: 15px;
-  font-family: jua;
+  font-family: var(--font-basic);
 }
 
 .login-form input:focus {
@@ -79,6 +81,10 @@
   border: none;
   margin-bottom: 25px;
   font-size: 20px;
+}
+
+.login-form__btn input {
+  font-weight: 600;
 }
 
 .login-form__a {

@@ -1,4 +1,4 @@
-@import "./Login.css";
+@import "./login.css";
 @import "./components/status-bar.css";
 @import "./components/screen-header.css";
 @import "./components/user-component.css";
@@ -18,8 +18,18 @@
   --basic-font-size: 20px;
   --stick-border: 1px solid rgba(26, 19, 19, 0.2);
   --black-color: #2e363e;
+  --font-point: "Jua", sans-serif;
+  --font-basic: "Lato", sans-serif;
 }
 
 body {
-  font-family: "Jua", sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-basic);
+  font-weight: 600;
+}
+
+h1 {
+  font-family: var(--font-point);
 }
