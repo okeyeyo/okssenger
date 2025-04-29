@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "./NavBar.jsx";
+import "../styles/App.css";
 
 function Layout({ children }) {
   const [batteryLevel, setBatteryLevel] = useState(null);
@@ -64,6 +66,7 @@ function Layout({ children }) {
         </div>
       </div>
       <div className="layout-content">{children}</div>
+      <NavBar />
     </div>
   );
 }

@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa"; // FontAwesome 아이콘 import
 function Friends() {
   return (
-    <main className="main-screen">
+    <div className="main-screen">
       <header className="screen-header">
         <h3 className="screen-header__title">친구</h3>
         <div className="screen-header__icons">
@@ -109,33 +109,7 @@ function Friends() {
         </div>
       </main>
 
-      <nav className="nav">
-        <ul className="nav__list">
-          <li className="nav__btn">
-            <a className="nav__link" href="friends.html">
-              <FaUser size={30} />
-            </a>
-          </li>
-          <li className="nav__btn">
-            <a className="nav__link" href="chats.html">
-              <span className="nav__notification badge">1</span>
-              <FaComment size={30} />
-            </a>
-          </li>
-          <li className="nav__btn">
-            <a className="nav__link" href="shopping.html">
-              <FaShoppingCart size={30} />
-            </a>
-          </li>
-          <li className="nav__btn">
-            <a className="nav__link" href="more.html">
-              <FaEllipsisH size={30} />
-              <div className="dot"></div>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </main>
+    </div>
   );
 }
 

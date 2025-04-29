@@ -1,3 +1,7 @@
+.frineds-screen {
+  overflow-y: auto;
+}
+
 .frineds-screen__list {
   margin-top: 25px;
   border-top: var(--stick-border);
