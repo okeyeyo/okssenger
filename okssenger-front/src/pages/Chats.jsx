@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  FaSearch,
-  FaUser,
-  FaComment,
-  FaEllipsisH,
-  FaShoppingCart,
-  FaCog,
-} from "react-icons/fa"; // FontAwesome 아이콘 import
+import { FaSearch, FaComment, FaCog } from "react-icons/fa"; // FontAwesome 아이콘 import
 import "../styles/App.css"; // 스타일 파일 import
 
 function Main() {

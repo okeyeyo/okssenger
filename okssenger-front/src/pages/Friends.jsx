@@ -1,21 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/App.css"; // 스타일 파일 import
-import FriendItem from "./FriendItem";
+import FriendItem from "../components/FriendItem.jsx";
 import { friends } from "../data/friends";
 import {
-  FaMusic,
   FaSearch,
   FaUserPlus,
   FaCog,
-  FaPlayCircle,
-  FaUser,
-  FaComment,
-  FaShoppingCart,
-  FaEllipsisH,
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa"; // FontAwesome 아이콘 import
+
 function Friends() {
+  const [showChannels, setShowChannels] = useState(true);
+  const [showFriends, setShowFriends] = useState(true);
+
   return (
     <div className="main-screen">
       <header className="screen-header">
@@ -48,66 +46,54 @@ function Friends() {
               </h6>
             </div>
           </div>
-          <div className="user-component__column"></div>
         </div>
-        <div className="frineds-screen__list">
-          <div className="frineds-screen__list-header">
+        <div className="friends-screen__list">
+          <div
+            className="friends-screen__list-header"
+            onClick={() => setShowChannels((v) => !v)}
+          >
             <span>채널</span>
-            <FaChevronDown size={18} color="var(--gray-color)" />
+            {showChannels ? (
+              <FaChevronDown size={18} color="var(--gray-color)" />
+            ) : (
+              <FaChevronUp size={18} color="var(--gray-color)" />
+            )}
           </div>
-          <div className="frineds-screen__list-header">
-            <span>친구 3</span>
-            <FaChevronUp size={18} color="var(--gray-color)" />
-          </div>
-          <div className="user-component">
-            <div className="user-component__column">
-              <img
-                src="https://data.onnada.com/character/202503/thumb_1994052142_31a1e082__main1.png"
-                className="user-component__avatar user-component__avatar--sm"
-                alt="User Avatar"
-              />
-              <div className="user-component__text">
-                <h4 className="user-component__name">坂本太郎</h4>
-                <h6 className="user-component__introduce">.</h6>
-              </div>
+          {/* 채널 내용 */}
+          {showChannels && (
+            <div className="friends-screen__list-content">
+              {/* FriendItem으로 채널 리스트도 렌더링 가능 */}
             </div>
-            <div className="user-component__column"></div>
+          )}
+
+          {/* 친구 토글 */}
+          <div
+            className="friends-screen__list-header"
+            onClick={() => setShowFriends((v) => !v)}
+          >
+            <span>친구 {friends.length}</span>
+            {showFriends ? (
+              <FaChevronDown size={18} color="var(--gray-color)" />
+            ) : (
+              <FaChevronUp size={18} color="var(--gray-color)" />
+            )}
           </div>
-          <div className="user-component">
-            <div className="user-component__column">
-              <img
-                src="https://data.onnada.com/character/201510/thumb_1030033395_23ae4c14_f305-s.jpg"
-                className="user-component__avatar user-component__avatar--sm"
-                alt="User Avatar"
-              />
-              <div className="user-component__text">
-                <h4 className="user-component__name">サイタマ</h4>
-                <h6 className="user-component__introduce">
-                  취미로 히어로를 하는 사람이다.
-                </h6>
-              </div>
+
+          {/* 친구 목록 */}
+          {showFriends && (
+            <div className="friends-screen__list-content">
+              {friends.map((f) => (
+                <FriendItem
+                  key={f.id}
+                  avatar={f.avatar}
+                  name={f.name}
+                  introduce={f.introduce}
+                  musicTitle={f.musicTitle}
+                  onClick={() => console.log("클릭:", f.name)}
+                />
+              ))}
             </div>
-            <div className="user-component__column"></div>
-          </div>
-          <div className="user-component">
-            <div className="user-component__column">
-              <img
-                src="https://avatars.githubusercontent.com/u/99576806?v=4"
-                className="user-component__avatar user-component__avatar--sm"
-                alt="User Avatar"
-              />
-              <div className="user-component__text">
-                <h4 className="user-component__name">인옥</h4>
-                <h6 className="user-component__introduce">
-                  열심히 해보겠습니다..
-                </h6>
-              </div>
-            </div>
-            <div className="user-component__column-music">
-              사랑의 미학 - 리도어
-              <FaPlayCircle color="#d65838" />
-            </div>
-          </div>
+          )}
         </div>
       </main>
     </div>
