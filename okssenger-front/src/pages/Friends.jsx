@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/App.css"; // 스타일 파일 import
+import FriendItem from "./FriendItem";
+import { friends } from "../data/friends";
 import {
   FaMusic,
   FaSearch,
@@ -108,7 +110,6 @@ function Friends() {
           </div>
         </div>
       </main>
-
     </div>
   );
 }
