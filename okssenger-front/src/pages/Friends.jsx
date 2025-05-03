@@ -52,7 +52,7 @@ function Friends() {
             className="friends-screen__list-header"
             onClick={() => setShowChannels((v) => !v)}
           >
-            <span>채널</span>
+            <span className="friends-screen__list-channel">채널</span>
             {showChannels ? (
               <FaChevronDown size={18} color="var(--gray-color)" />
             ) : (
@@ -71,7 +71,9 @@ function Friends() {
             className="friends-screen__list-header"
             onClick={() => setShowFriends((v) => !v)}
           >
-            <span>친구 {friends.length}</span>
+            <span className="friends-screen__friends-list">
+              친구 {friends.length}
+            </span>
             {showFriends ? (
               <FaChevronDown size={18} color="var(--gray-color)" />
             ) : (

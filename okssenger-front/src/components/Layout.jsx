@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import NavBar from "./NavBar.jsx";
 import "../styles/App.css";
 
 function Layout({ children }) {
   const [batteryLevel, setBatteryLevel] = useState(null);
   const [currentTime, setCurrentTime] = useState(""); // 초기값 빈 문자열로 설정
+  const location = useLocation();
 
   // 현재 시간 업데이트 (1초마다)
   useEffect(() => {
@@ -45,6 +47,15 @@ function Layout({ children }) {
       console.log("Battery API 지원하지 않음.");
     }
   }, []);
+
+  useEffect(() => {
+    // 예: /friends 경로일 때만 body에 'friends-bg' 클래스 추가
+    if (location.pathname === "/friends") {
+      document.body.classList.add("friends-bg");
+    } else {
+      document.body.classList.remove("friends-bg");
+    }
+  }, [location.pathname]);
 
   return (
     <div className="layout">
