@@ -32,14 +32,18 @@ export default function FriendItem({
           alt={`${name} Avatar`}
         />
         <div className="user-component__text">
-          <h4 className="user-component__name">{name}</h4>
-          <h6 className="user-component__introduce">{introduce}</h6>
-          {musicTitle && (
-            <div className="user-component__music">
-              {musicTitle}
-              <FaPlayCircle color="#d65838" />
-            </div>
-          )}
+          <div className="user-component__info">
+            <h4 className="user-component__info-name">{name}</h4>
+            <h6 className="user-component__info-introduce">{introduce}</h6>
+          </div>
+          <div className="user-component__music">
+            {musicTitle && (
+              <div className="user-component__music-title">
+                {musicTitle}
+                <FaPlayCircle color="#d65838" />
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <div className="user-component__column">{/* 추가 UI */}</div>

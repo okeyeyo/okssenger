@@ -39,9 +39,9 @@ function Friends() {
               className="user-component__avatar user-component__avatar--xl"
               alt="User Avatar"
             />
-            <div className="user-component__text">
-              <h4 className="user-component__name">홍길동</h4>
-              <h6 className="user-component__introduce">
+            <div className="user-component__info">
+              <h4 className="user-component__info-name">홍길동</h4>
+              <h6 className="user-component__info-introduce">
                 아버지를 아버지라 부르지 못하다니
               </h6>
             </div>

@@ -19,10 +19,9 @@ body.friends-bg {
 
 .friends-screen__list-header {
   display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
   margin: 10px 0px;
+  border-top: 1px solid var(--gray-color);
   color: var(--gray-color);
-}
-
-.frineds-screen__list-header:first-child {
-  border-bottom: var(--stick-border);
 }
