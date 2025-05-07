@@ -38,8 +38,14 @@ body {
   font-family: var(--font-basic);
   font-weight: 600;
   height: 100vh;
+  background-color: var(--background-color);
 }
 
 h1 {
   font-family: var(--font-point);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
 }

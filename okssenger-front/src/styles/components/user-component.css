@@ -1,6 +1,5 @@
 .main-screen {
   padding: 0px var(--horizontal-space);
-  background-color: var(--background-color);
 }
 
 .user-component,
@@ -8,6 +7,11 @@
   display: flex;
   align-items: center;
   height: 90px;
+}
+
+.user-component {
+  display: flex;
+  justify-content: space-between;
 }
 
 .user-component__text {
