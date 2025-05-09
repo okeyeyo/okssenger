@@ -21,7 +21,7 @@ function Main() {
       </header>
 
       <main>
-        <a className="link" href="chat.html">
+        <a className="link" href="Chat.jsx">
           <div className="user-component">
             <div className="user-component__column">
               <img

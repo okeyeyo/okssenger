@@ -7,6 +7,7 @@ function Layout({ children }) {
   const [batteryLevel, setBatteryLevel] = useState(null);
   const [currentTime, setCurrentTime] = useState(""); // 초기값 빈 문자열로 설정
   const location = useLocation();
+  const hideNavBar = ["/login", "/chat"].includes(location.pathname);
 
   // 현재 시간 업데이트 (1초마다)
   useEffect(() => {
@@ -77,7 +78,8 @@ function Layout({ children }) {
         </div>
       </div>
       <div className="layout-content">{children}</div>
-      <NavBar />
+      {/* NavBar: hideNav가 false일 때만 */}
+      {!hideNavBar && <NavBar />}
     </div>
   );
 }
