@@ -3,11 +3,10 @@ import { useLocation } from "react-router-dom";
 import NavBar from "./NavBar.jsx";
 import "../styles/App.css";
 
-function Layout({ children }) {
+export default function Layout({ children, hideNavBar = false }) {
   const [batteryLevel, setBatteryLevel] = useState(null);
   const [currentTime, setCurrentTime] = useState(""); // 초기값 빈 문자열로 설정
   const location = useLocation();
-  const hideNavBar = ["/login", "/chat"].includes(location.pathname);
 
   // 현재 시간 업데이트 (1초마다)
   useEffect(() => {
@@ -58,6 +57,8 @@ function Layout({ children }) {
     }
   }, [location.pathname]);
 
+  const hideNav = ["/login", "/chat"].includes(location.pathname);
+
   return (
     <div className="layout">
       <div className="status-bar">
@@ -78,10 +79,9 @@ function Layout({ children }) {
         </div>
       </div>
       <div className="layout-content">{children}</div>
-      {/* NavBar: hideNav가 false일 때만 */}
-      {!hideNavBar && <NavBar />}
+
+      {/* NavBar: hideNav가 false일 때만 숨김*/}
+      {!hideNav && <NavBar />}
     </div>
   );
 }
-
-export default Layout;

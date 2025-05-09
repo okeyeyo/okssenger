@@ -1,14 +1,27 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // useNavigate 훅 사용
+import { useNavigate } from "react-router-dom";
+import { login } from "../api/authApi.js";
 import { FaUser, FaLock, FaEye, FaEyeSlash } from "react-icons/fa"; // FontAwesome 아이콘 import
 import "../styles/App.css"; // 스타일 파일 import
 
-function Login() {
+export default function LoginPage() {
   const navigate = useNavigate(); // useNavigate 훅 사용
+
   const [passwordType, setPasswordType] = useState("password");
   const [iconClass, setIconClass] = useState("eye"); // 'eye' 상태로 초기화
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await login(username, password);
+      // 로그인 성공 시 친구 페이지로 이동
+      navigate("/friends");
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   // 비밀번호 타입 토글
   const togglePassword = () => {
@@ -18,36 +31,6 @@ function Login() {
     setIconClass(
       (prevClass) => (prevClass === "eye" ? "eye-slash" : "eye") // 상태를 'eye' / 'eye-slash'로 관리
     );
-  };
-
-  // 로그인 폼 제출 처리
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch("http://localhost:3000/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: username,
-          password: password,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.message === "로그인 성공") {
-        console.log("로그인 성공!", data.user);
-        navigate("/friends"); // 로그인 성공하면 친구 목록으로 이동
-      } else {
-        alert(data.message); // 로그인 실패 메시지 보여주기
-      }
-    } catch (error) {
-      console.error("로그인 중 에러 발생:", error);
-      alert("서버 오류가 발생했습니다.");
-    }
   };
 
   return (
@@ -112,5 +95,3 @@ function Login() {
     </main>
   );
 }
-
-export default Login;
