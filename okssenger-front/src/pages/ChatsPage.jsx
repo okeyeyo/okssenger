@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaSearch, FaComment, FaCog } from "react-icons/fa"; // FontAwesome 아이콘 import
 import "../styles/App.css"; // 스타일 파일 import
 
-function Main() {
+export default function ChatsPage() {
   return (
     <div className="main-screen">
       <header className="screen-header">
@@ -21,7 +22,10 @@ function Main() {
       </header>
 
       <main>
-        <a className="link" href="Chat.jsx">
+        <Link
+          className="link"
+          to={`/chat/${encodeURIComponent("坂本太郎")}`}
+        >
           <div className="user-component">
             <div className="user-component__column">
               <img
@@ -41,10 +45,8 @@ function Main() {
               <div className="badge">1</div>
             </div>
           </div>
-        </a>
+        </Link>
       </main>
     </div>
   );
 }
-
-export default Main;

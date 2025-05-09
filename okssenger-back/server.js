@@ -1,21 +1,24 @@
-const express = require("express");
+import dotenv from "dotenv";
+dotenv.config();
+
+import express from "express";
+import cors from "cors";
+
+import authRoutes from "./routes/authRoutes.js";
+import chatRoutes from "./routes/chats.js";
+import authMiddleware from "./middleware/auth.js";
+
 const app = express();
-const cors = require("cors");
-const authRoutes = require("./routes/auth");
-const db = require("./db");
+app.use(cors(), express.json());
 
-require("dotenv").config();
+app.use("/api/auth", authRoutes);
+app.use("/api/chats", authMiddleware, chatRoutes);
 
-app.use(cors());
-app.use(express.json());
-
-app.use("/auth", authRoutes);
-
-app.get("/", (req, res) => {
-  res.send("옥신저 백엔드 실행 중");
+const PORT = process.env.PORT || 4000;
+app.use((err, req, res, next) => {
+  console.error("🔥 서버 에러:", err);
+  res
+    .status(err.status || 500)
+    .json({ error: err.message || "Internal Server Error" });
 });
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`서버 실행 중! http://localhost:${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
