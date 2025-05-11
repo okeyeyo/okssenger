@@ -13,12 +13,13 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/login" element={<Login />} /> {/* 로그인 페이지 */}
+          <Route path="/login" exact element={<Login />} />{" "}
+          {/* 로그인 페이지 */}
           <Route path="/chats" element={<Chats />} /> {/* 대화 페이지 */}
           <Route path="/friends" element={<Friends />} /> {/* 친구 페이지 */}
           <Route path="/chat/:user" element={<Chat />} />{" "}
           {/* :user 라우트 파라미터를 쓰면 어떤 친구 이름이든 Chat 컴포넌트로 보냄 */}
-          <Route path="/" exact element={<Login />} />
+          {/* <Route path="/" exact element={<Login />} /> */}
           {/* 기본 라우트는 로그인 페이지로 설정 */}
         </Routes>
       </Layout>
